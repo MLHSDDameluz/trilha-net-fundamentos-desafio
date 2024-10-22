@@ -14,8 +14,8 @@ namespace DesafioFundamentos.Models
 
         public void AdicionarVeiculo()
         {
-            // TODO: Pedir para o usuário digitar uma placa (ReadLine) e adicionar na lista "veiculos"
-            // *IMPLEMENTE AQUI*
+            /*Usuário digita uma placa. Sistema verifica se placa tem menos de 7 caracteres. 
+            Se a placa for válida inclui na lista de veículos estacionados.*/
             bool placaValida = false;
             while (placaValida == false)
             {
@@ -70,8 +70,10 @@ namespace DesafioFundamentos.Models
             if (veiculos.Any())
             {
                 Console.WriteLine("Os veículos estacionados são:");
-                // TODO: Realizar um laço de repetição, exibindo os veículos estacionados
-                // *IMPLEMENTE AQUI*
+                foreach(string x in veiculos)
+                {
+                    System.Console.WriteLine($"Veículo placa: {x.ToUpper()}");
+                }
             }
             else
             {
